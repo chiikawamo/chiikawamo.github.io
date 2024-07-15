@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Monica Jimenez | 483E: Computer Assisted Graphics | 2024 Summer | TU</title>
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<style type="text/css">
+/*this is the reset*/
+* {
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+	text-decoration: none;
+}
+
+/*this is the menu*/
+#Wrapper {
+    width: 720px;
+	left: -720px;
+    transition: all 0.8s ease-in-out;
+    background-color: rgba(53,28,117,1.00);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    height: 100%;
+}
+.logomark {
+	width: 120px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 24px;
+}
+.Portrait {
+	width: 60px;
+	height: auto;
+	border-radius: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+h1 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: hsla(0,0%,89%,1.00);
+    margin-top: 10px;
+}
+h2 {
+    font-weight: 200;
+    font-size: 12px;
+    padding-bottom: 30px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    color: hsla(0,0%,89%,1.00);
+}
+/*This is the main Navigation setting*/
+
+.PrimaryNav {
+    background-color: rgba(87,75,121,0.67);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.PrimaryNav ul {
+    background-color: rgba(87,75,121,0.67);
+}
+.PrimaryNav li {
+    background-color: rgba(212,189,57,1.00);
+    margin-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgba(53,28,117,1.00);
+}
+.PrimaryNav a {
+    padding: 12px 68px;
+    color: rgba(53,28,117,1.00);
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+ul li a {
+}
+.PrimaryNav li:hover {
+	background-color: rgba(0,0,0,0.30);
+}
+.PrimaryNav a:hover {
+    color: rgba(215,215,215,1.00);
+}
+footer {
+    padding-bottom: 40px;
+    font-weight: 200;
+    color: rgba(222,222,222,1.00);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 35px;
+}
+footer p {
+    font-size: 10px;
+    letter-spacing: 3px;
+    padding-top: 16px;
+}
+    
+footer a {
+    color: rgba(222,222,222,1.00);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+    
+/*This is background image & animation section*/
+    
+html { 
+  background-size: cover;
+  height: 100%; 
+  animation: bg-animation 40s infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-image: url("images/index01.png");
+  }
+  16% {
+    background-image: url("images/index02.png");
+  }
+
+  32% {
+    background-image: url("images/index03.png");
+  }
+
+  48% {
+    background-image: url("images/index04.png");
+  }
+64% {
+    background-image: url("images/index05.png");
+  }
+	
+  80% {
+    background-image: url("images/index06.png");
+  }
+  100% {
+    background-image: url("images/index01.png");
+}
+    }
+
+    /*This is to set the Wrapper to the left*/
+#Wrapper.open {
+        left: 0;
+      }
+   /*This is to set the Toggle button*/ 
+ #Toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgba(24,1,1,0.77);
+      }
+/*This is the end of the style setting*/ 
+</style>
+</head>
+	
+<body>
+<div id="Wrapper">
+<header><img class="logomark" src="images/logo.png" img alt="text">
+<img class="Portrait" src="images/me.jpg" <img alt="text">
+<h1>Monica Jimenez</h1>
+<h2>483E: Computer Assisted Graphic <br> 
+Spring 2024| TU 1:00-6:45</h2>
+</header>
+<main>
+<nav class="PrimaryNav">
+<ul>
+<li>
+<a href="https:">Project 01 </a>| 
+<a href="https:">Design Process</a></li>
+<li>
+<a href="">Project 02 </a>| 
+<a href="">Design Process</a></li>
+<li>
+<a href="">Project 03 </a>| 
+<a href="">Design Process</a></li>
+</ul>
+</nav>
+</main>
+<footer>
+    <a href="about.html" target="_blank">About Me</a> | <a href="https://www.instagram.com/chen_wang_design/">Social Media Link</a>
+<div class="SocialMedia"></div>
+<p>&copy; Monica Jimenez Design 2024</p>
+</footer>
+    <!-- this is the taggle link bar -->
+    <a id="Toggle">☰</a>
+    
+    <script>
+      var wrapper = document.getElementById("Wrapper");
+      var toggle = document.getElementById("Toggle");
+      
+      toggle.addEventListener("click", function() {
+        wrapper.classList.toggle("open");
+      });
+    </script>
+
+</div>
+</body>
+</html>
+
+
+
